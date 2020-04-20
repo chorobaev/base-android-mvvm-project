@@ -6,8 +6,8 @@ import dagger.Binds
 import dagger.Module
 
 @Module
-abstract class ContextModule {
+interface ContextModule {
 
     @Binds
-    abstract fun provideContext(application: Application): Context
+    fun bindContext(application: Application): Context
 }

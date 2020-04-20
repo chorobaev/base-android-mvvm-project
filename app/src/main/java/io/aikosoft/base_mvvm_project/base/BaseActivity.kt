@@ -6,11 +6,13 @@ import androidx.annotation.LayoutRes
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import dagger.android.support.DaggerAppCompatActivity
+import io.aikosoft.base_mvvm_project.utils.MyLogger
 import javax.inject.Inject
 
-abstract class BaseActivity : DaggerAppCompatActivity() {
+abstract class BaseActivity : DaggerAppCompatActivity(), MyLogger {
 
-    @Inject lateinit var viewModelFactory: ViewModelFactory
+    @Inject
+    lateinit var viewModelFactory: ViewModelFactory
     protected lateinit var commonViewModel: CommonViewModel
     private var errorListener: ((String) -> Unit)? = null
 

@@ -6,8 +6,8 @@ import io.aikosoft.base_mvvm_project.ui.main.MainActivity
 import io.aikosoft.base_mvvm_project.ui.main.MainFragmentBindingModule
 
 @Module
-abstract class ActivityBindingModule {
+interface ActivityBindingModule {
 
     @ContributesAndroidInjector(modules = [MainFragmentBindingModule::class])
-    abstract fun bindMainActivity(): MainActivity
+    fun bindMainActivity(): MainActivity
 }

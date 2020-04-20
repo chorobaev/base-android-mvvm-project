@@ -48,13 +48,13 @@ class ApplicationModule {
 
     @Singleton
     @Provides
-    fun provideK2TaxiRetrofit(
+    fun provideBaseMVVMRetrofit(
         @BaseUrl baseUrl: String,
         retrofitBuilder: Retrofit.Builder
     ): Retrofit = retrofitBuilder.baseUrl(baseUrl).build()
 
     @Singleton
     @Provides
-    fun provideOrderClient(@BaseMVVMApp retrofit: Retrofit): SampleClient =
+    fun provideSampleClient(@BaseMVVMApp retrofit: Retrofit): SampleClient =
         retrofit.create(SampleClient::class.java)
 }

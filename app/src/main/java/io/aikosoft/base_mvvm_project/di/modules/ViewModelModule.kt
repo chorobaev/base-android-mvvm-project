@@ -10,20 +10,19 @@ import io.aikosoft.base_mvvm_project.base.ViewModelFactory
 import io.aikosoft.base_mvvm_project.ui.main.MainViewModel
 import io.jachoteam.taxiappclient.di.util.ViewModelKey
 
-
 @Module
-abstract class ViewModelModule {
+interface ViewModelModule {
 
     @Binds
     @IntoMap
     @ViewModelKey(CommonViewModel::class)
-    abstract fun bindCommonViewModel(commonViewModel: CommonViewModel): ViewModel
+    fun bindCommonViewModel(commonViewModel: CommonViewModel): ViewModel
 
     @Binds
     @IntoMap
     @ViewModelKey(MainViewModel::class)
-    abstract fun bindMainViewModel(mainViewModel: MainViewModel): ViewModel
+    fun bindMainViewModel(mainViewModel: MainViewModel): ViewModel
 
     @Binds
-    abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
+    fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
 }
