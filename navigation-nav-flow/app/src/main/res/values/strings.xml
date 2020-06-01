@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Flower</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="auth_msg_country_code">+996</string>
+    <string name="main_hint_phone_number">Phone nuber</string>
+    <string name="auth_btn_msg_next">Next</string>
+    <string name="auth_msg_resend_verification_code_in_long_seconds">Resend verification code in %d sec.</string>
+    <string name="auth_msg_verification_code_sent_to">Verification code sent to:</string>
+    <string name="auth_msg_enter_verification_code">Enter verification code</string>
+    <string name="login_btn_msg_verify">Verify</string>
+    <string name="auth_msg_resend">Resend</string>
+</resources>

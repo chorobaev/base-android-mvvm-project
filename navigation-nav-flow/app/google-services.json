@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "132392356347",
+    "firebase_url": "https://amanatroad-dev.firebaseio.com",
+    "project_id": "amanatroad-dev",
+    "storage_bucket": "amanatroad-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132392356347:android:86ba0c7d7fe1c1efbc235e",
+        "android_client_info": {
+          "package_name": "io.aikosoft.amanatroadcourier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "132392356347-tak3lqdomigmek6dcmos00k5po1jib4e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpDPOK_CHyQ7dyGOJOeG_OmdgAFCyRZQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "132392356347-tak3lqdomigmek6dcmos00k5po1jib4e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
