@@ -1,11 +1,11 @@
-package io.aikosoft.base_mvvm_project.di.utils
+package io.aikosoft.traditional_nav_rxjava.di.utils
 
 import javax.inject.Qualifier
 
 @Qualifier
 @MustBeDocumented
 @Retention(AnnotationRetention.RUNTIME)
-annotation class BaseMVVMApp
+annotation class SampleApp
 
 @Qualifier
 @MustBeDocumented

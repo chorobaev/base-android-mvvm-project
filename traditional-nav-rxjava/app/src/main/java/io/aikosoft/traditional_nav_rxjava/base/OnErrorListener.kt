@@ -1,4 +1,4 @@
-package io.aikosoft.base_mvvm_project.base
+package io.aikosoft.traditional_nav_rxjava.base
 
 interface OnErrorListener {
     fun onError(error: Throwable)

@@ -1,8 +1,8 @@
-package io.aikosoft.base_mvvm_project.ui.main
+package io.aikosoft.traditional_nav_rxjava.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import io.aikosoft.base_mvvm_project.R
+import io.aikosoft.traditional_nav_rxjava.R
 
 class MainActivity : AppCompatActivity() {
 

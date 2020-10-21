@@ -1,4 +1,4 @@
-package io.aikosoft.base_mvvm_project.di.components
+package io.aikosoft.traditional_nav_rxjava.di.components
 
 import android.app.Application
 import dagger.BindsInstance
@@ -6,9 +6,9 @@ import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 import dagger.android.support.DaggerApplication
-import io.aikosoft.base_mvvm_project.di.modules.ApplicationModule
-import io.aikosoft.base_mvvm_project.di.modules.ContextModule
-import io.aikosoft.base_mvvm_project.ui.BaseMVVMApp
+import io.aikosoft.traditional_nav_rxjava.di.modules.ApplicationModule
+import io.aikosoft.traditional_nav_rxjava.di.modules.ContextModule
+import io.aikosoft.traditional_nav_rxjava.ui.SampleApp
 import javax.inject.Singleton
 
 @Singleton
@@ -26,5 +26,5 @@ interface ApplicationComponent : AndroidInjector<DaggerApplication> {
         fun build(): ApplicationComponent
     }
 
-    fun inject(application: BaseMVVMApp)
+    fun inject(application: SampleApp)
 }

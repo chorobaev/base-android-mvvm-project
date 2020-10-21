@@ -2,15 +2,15 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'androidx.navigation.safeargs.kotlin'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
     defaultConfig {
-        applicationId "io.aikosoft.navigation_nav_flow"
-        minSdkVersion 21
-        targetSdkVersion 29
+        applicationId names.applicationId
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
         versionCode 1
         versionName "v1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -31,38 +31,36 @@ android {
 }
 
 dependencies {
-    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
-    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
-
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation "androidx.appcompat:appcompat:$appCompatVersion"
-    implementation "androidx.core:core-ktx:$coreVersion"
-    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecyleVersion"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecyleVersion"
-    implementation "androidx.lifecycle:lifecycle-service:$lifecyleVersion"
+    implementation "androidx.appcompat:appcompat:${versions.appCompat}"
+    implementation "androidx.core:core-ktx:${versions.core}"
+    implementation "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycle}"
+    implementation "androidx.lifecycle:lifecycle-service:${versions.lifecycle}"
 
-    implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
-    implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+    implementation "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
+    implementation "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
 
-    implementation "com.google.android.material:material:$materialVersion"
+    implementation "com.google.android.material:material:${versions.material}"
 
-    implementation "com.google.dagger:dagger-android:$daggerVersion"
-    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    implementation "com.google.dagger:dagger-android:${versions.dagger}"
 
-    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
-    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:${versions.okHttp}"
+    implementation "com.squareup.okhttp3:okhttp:${versions.okHttp}"
 
-    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    implementation "com.squareup.retrofit2:converter-scalars:$retrofitVersion"
-    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:${versions.retrofit}"
+    implementation "com.squareup.retrofit2:converter-scalars:${versions.retrofit}"
+    implementation "com.squareup.retrofit2:retrofit:${versions.retrofit}"
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}"
 
-    testImplementation "junit:junit:$junitVersion"
-    androidTestImplementation "androidx.test.ext:junit:$androidJunitVersion"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    kapt "com.google.dagger:dagger-compiler:${versions.dagger}"
+
+    testImplementation "junit:junit:${versions.junit}"
+    androidTestImplementation "androidx.test.ext:junit:${versions.androidJunit}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${versions.espresso}"
 }

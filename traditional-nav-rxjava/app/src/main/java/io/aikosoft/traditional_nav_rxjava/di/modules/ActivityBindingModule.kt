@@ -1,9 +1,9 @@
-package io.aikosoft.base_mvvm_project.di.modules
+package io.aikosoft.traditional_nav_rxjava.di.modules
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
-import io.aikosoft.base_mvvm_project.ui.main.MainActivity
-import io.aikosoft.base_mvvm_project.ui.main.MainFragmentBindingModule
+import io.aikosoft.traditional_nav_rxjava.ui.main.MainActivity
+import io.aikosoft.traditional_nav_rxjava.ui.main.MainFragmentBindingModule
 
 @Module
 interface ActivityBindingModule {

@@ -5,9 +5,9 @@ apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    buildToolsVersion "29.0.3"
     defaultConfig {
-        applicationId "io.aikosoft.base_mvvm_project"
+        applicationId "io.aikosoft.traditional_nav_rxjava"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -36,8 +36,9 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:$constraintVersion"
     implementation "androidx.core:core-ktx:$coreVersion"
 
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecyleVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecyleVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecyleVersion"
+    implementation "androidx.lifecycle:lifecycle-service:$lifecyleVersion"
 
     implementation "com.google.android.material:material:$materialVersion"
 

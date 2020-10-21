@@ -1,4 +1,4 @@
-package io.aikosoft.base_mvvm_project.base
+package io.aikosoft.traditional_nav_rxjava.base
 
 import android.content.Context
 import android.os.Bundle
@@ -9,7 +9,7 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import dagger.android.support.DaggerFragment
-import io.aikosoft.base_mvvm_project.utils.MyLogger
+import io.aikosoft.traditional_nav_rxjava.utils.MyLogger
 import javax.inject.Inject
 
 abstract class BaseFragment : DaggerFragment(), MyLogger {

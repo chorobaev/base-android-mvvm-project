@@ -1,4 +1,4 @@
-package io.aikosoft.base_mvvm_project.base
+package io.aikosoft.traditional_nav_rxjava.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

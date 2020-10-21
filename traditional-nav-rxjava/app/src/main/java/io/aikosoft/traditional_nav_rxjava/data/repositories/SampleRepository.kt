@@ -1,3 +1,3 @@
-package io.aikosoft.base_mvvm_project.data.repositories
+package io.aikosoft.traditional_nav_rxjava.data.repositories
 
 interface SampleRepository

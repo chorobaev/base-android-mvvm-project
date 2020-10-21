@@ -1,7 +1,7 @@
-package io.aikosoft.base_mvvm_project.data.repositories.implementations
+package io.aikosoft.traditional_nav_rxjava.data.repositories.implementations
 
-import io.aikosoft.base_mvvm_project.data.network.SampleClient
-import io.aikosoft.base_mvvm_project.data.repositories.SampleRepository
+import io.aikosoft.traditional_nav_rxjava.data.network.SampleClient
+import io.aikosoft.traditional_nav_rxjava.data.repositories.SampleRepository
 import javax.inject.Inject
 import javax.inject.Singleton
 

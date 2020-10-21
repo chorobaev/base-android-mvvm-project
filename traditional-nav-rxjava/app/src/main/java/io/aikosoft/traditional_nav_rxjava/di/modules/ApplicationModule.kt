@@ -1,12 +1,12 @@
-package io.aikosoft.base_mvvm_project.di.modules
+package io.aikosoft.traditional_nav_rxjava.di.modules
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
-import io.aikosoft.base_mvvm_project.data.network.SampleClient
-import io.aikosoft.base_mvvm_project.di.utils.BaseMVVMApp
-import io.aikosoft.base_mvvm_project.di.utils.BaseUrl
+import io.aikosoft.traditional_nav_rxjava.data.network.SampleClient
+import io.aikosoft.traditional_nav_rxjava.di.utils.SampleApp
+import io.aikosoft.traditional_nav_rxjava.di.utils.BaseUrl
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -50,13 +50,14 @@ class ApplicationModule {
 
     @Singleton
     @Provides
-    fun provideBaseMVVMRetrofit(
+    @SampleApp
+    fun provideSampleRetrofit(
         @BaseUrl baseUrl: String,
         retrofitBuilder: Retrofit.Builder
     ): Retrofit = retrofitBuilder.baseUrl(baseUrl).build()
 
     @Singleton
     @Provides
-    fun provideSampleClient(@BaseMVVMApp retrofit: Retrofit): SampleClient =
+    fun provideSampleClient(@SampleApp retrofit: Retrofit): SampleClient =
         retrofit.create(SampleClient::class.java)
 }

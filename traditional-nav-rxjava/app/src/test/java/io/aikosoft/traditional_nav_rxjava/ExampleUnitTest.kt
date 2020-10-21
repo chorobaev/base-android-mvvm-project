@@ -1,4 +1,4 @@
-package io.aikosoft.base_mvvm_project
+package io.aikosoft.traditional_nav_rxjava
 
 import org.junit.Test
 

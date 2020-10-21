@@ -1,6 +1,6 @@
-package io.aikosoft.base_mvvm_project.ui.main
+package io.aikosoft.traditional_nav_rxjava.ui.main
 
-import io.aikosoft.base_mvvm_project.base.BaseViewModel
+import io.aikosoft.traditional_nav_rxjava.base.BaseViewModel
 import javax.inject.Inject
 
 class MainViewModel @Inject constructor() : BaseViewModel()

@@ -1,3 +1,3 @@
-package io.aikosoft.base_mvvm_project.models
+package io.aikosoft.traditional_nav_rxjava.models
 
 class SampleModel

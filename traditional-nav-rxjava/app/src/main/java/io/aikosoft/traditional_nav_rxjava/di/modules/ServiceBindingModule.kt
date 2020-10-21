@@ -1,8 +1,8 @@
-package io.aikosoft.base_mvvm_project.di.modules
+package io.aikosoft.traditional_nav_rxjava.di.modules
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
-import io.aikosoft.base_mvvm_project.sevices.SampleService
+import io.aikosoft.traditional_nav_rxjava.sevices.SampleService
 
 @Module
 interface ServiceBindingModule {

@@ -1,8 +1,8 @@
-package io.aikosoft.base_mvvm_project.base
+package io.aikosoft.traditional_nav_rxjava.base
 
 import androidx.lifecycle.LifecycleService
 import dagger.android.AndroidInjection
-import io.aikosoft.base_mvvm_project.utils.MyLogger
+import io.aikosoft.traditional_nav_rxjava.utils.MyLogger
 
 abstract class BaseService : LifecycleService(), MyLogger {
 

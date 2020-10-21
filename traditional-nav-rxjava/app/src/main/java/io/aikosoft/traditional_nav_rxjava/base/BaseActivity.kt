@@ -1,4 +1,4 @@
-package io.aikosoft.base_mvvm_project.base
+package io.aikosoft.traditional_nav_rxjava.base
 
 import android.os.Bundle
 import android.widget.Toast
@@ -6,7 +6,7 @@ import androidx.annotation.LayoutRes
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import dagger.android.support.DaggerAppCompatActivity
-import io.aikosoft.base_mvvm_project.utils.MyLogger
+import io.aikosoft.traditional_nav_rxjava.utils.MyLogger
 import javax.inject.Inject
 
 abstract class BaseActivity : DaggerAppCompatActivity(), MyLogger {

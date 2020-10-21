@@ -1,4 +1,4 @@
-package io.aikosoft.base_mvvm_project
+package io.aikosoft.traditional_nav_rxjava
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

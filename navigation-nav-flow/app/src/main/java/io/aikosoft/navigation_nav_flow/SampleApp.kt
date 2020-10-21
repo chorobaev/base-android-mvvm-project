@@ -1,14 +1,22 @@
 package io.aikosoft.navigation_nav_flow
 
-import dagger.android.AndroidInjector
-import dagger.android.support.DaggerApplication
-import io.aikosoft.navigation_nav_flow.di.component.DaggerApplicationComponent
+import android.app.Application
+import io.aikosoft.navigation_nav_flow.dagger.DaggerAppComponent
 
-class SampleApp : DaggerApplication() {
+class SampleApp : Application() {
 
-    override fun applicationInjector(): AndroidInjector<out DaggerApplication> =
-        DaggerApplicationComponent.builder()
-            .application(this)
+    val appComponent by lazy {
+        DaggerAppComponent.builder()
+            .inject(this)
             .build()
-            .apply { inject(this@SampleApp) }
+    }
+
+    override fun onCreate() {
+        super.onCreate()
+        instance = this
+    }
+
+    companion object {
+        var instance: SampleApp? = null
+    }
 }

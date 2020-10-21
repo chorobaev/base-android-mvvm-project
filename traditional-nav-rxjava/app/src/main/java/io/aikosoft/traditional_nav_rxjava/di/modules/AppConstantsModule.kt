@@ -1,8 +1,8 @@
-package io.aikosoft.base_mvvm_project.di.modules
+package io.aikosoft.traditional_nav_rxjava.di.modules
 
 import dagger.Module
 import dagger.Provides
-import io.aikosoft.base_mvvm_project.di.utils.BaseUrl
+import io.aikosoft.traditional_nav_rxjava.di.utils.BaseUrl
 import javax.inject.Singleton
 
 @Module

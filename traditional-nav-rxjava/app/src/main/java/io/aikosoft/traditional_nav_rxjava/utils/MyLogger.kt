@@ -1,4 +1,4 @@
-package io.aikosoft.base_mvvm_project.utils
+package io.aikosoft.traditional_nav_rxjava.utils
 
 import android.util.Log
 

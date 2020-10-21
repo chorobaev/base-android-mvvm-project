@@ -1,4 +1,4 @@
-package io.aikosoft.base_mvvm_project.di.modules
+package io.aikosoft.traditional_nav_rxjava.di.modules
 
 import android.app.Application
 import android.content.Context

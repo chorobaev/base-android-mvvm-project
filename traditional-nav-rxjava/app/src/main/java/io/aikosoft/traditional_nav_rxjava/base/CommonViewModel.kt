@@ -1,10 +1,10 @@
-package io.aikosoft.base_mvvm_project.base
+package io.aikosoft.traditional_nav_rxjava.base
 
 import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import io.aikosoft.base_mvvm_project.R
+import io.aikosoft.traditional_nav_rxjava.R
 import org.json.JSONObject
 import retrofit2.HttpException
 import java.io.IOException

@@ -1,18 +1,19 @@
 package io.aikosoft.navigation_nav_flow
 
 import android.os.Bundle
-import dagger.android.support.DaggerAppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import io.aikosoft.navigation_nav_flow.factory.InjectingFragmentFactory
 import javax.inject.Inject
 
-class MainActivity : DaggerAppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var fragmentFactory: InjectingFragmentFactory
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        SampleApp.instance?.appComponent?.inject(this)
         supportFragmentManager.fragmentFactory = fragmentFactory
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
 }

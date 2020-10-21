@@ -1,12 +1,12 @@
-package io.aikosoft.navigation_nav_flow.di.module
+package io.aikosoft.navigation_nav_flow.dagger.module
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
+import io.aikosoft.navigation_nav_flow.BASE_URL
+import io.aikosoft.navigation_nav_flow.dagger.helper.qualifier.SampleApp
 import io.aikosoft.navigation_nav_flow.data.network.SampleClient
-import io.aikosoft.navigation_nav_flow.di.helper.qualifier.BaseUrl
-import io.aikosoft.navigation_nav_flow.di.helper.qualifier.SampleApp
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -16,21 +16,30 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
-class RetrofitModule {
+object RetrofitModule {
 
     @Singleton
     @Provides
     fun provideGson(): Gson = GsonBuilder().setLenient().create()
 
-    @Singleton
     @Provides
-    fun provideOkHttpClient(): OkHttpClient =
-        OkHttpClient.Builder()
-            .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+    fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {
+        return HttpLoggingInterceptor().apply {
+            level = HttpLoggingInterceptor.Level.BODY
+        }
+    }
+
+    @Provides
+    fun provideOkHttpClient(
+        loggingInterceptor: HttpLoggingInterceptor
+    ): OkHttpClient {
+        return OkHttpClient.Builder()
+            .addInterceptor(loggingInterceptor)
             .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
             .build()
+    }
 
     @Provides
     fun provideRetrofitBuilder(client: OkHttpClient, gson: Gson): Retrofit.Builder =
@@ -43,9 +52,8 @@ class RetrofitModule {
     @Provides
     @SampleApp
     fun provideSampleAppRetrofit(
-        @BaseUrl baseUrl: String,
         retrofitBuilder: Retrofit.Builder
-    ): Retrofit = retrofitBuilder.baseUrl(baseUrl).build()
+    ): Retrofit = retrofitBuilder.baseUrl(BASE_URL).build()
 
     @Singleton
     @Provides

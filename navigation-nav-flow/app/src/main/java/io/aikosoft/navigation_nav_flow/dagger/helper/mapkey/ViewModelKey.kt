@@ -1,4 +1,4 @@
-package io.aikosoft.navigation_nav_flow.di.helper.mapkey
+package io.aikosoft.navigation_nav_flow.dagger.helper.mapkey
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey
